@@ -15,6 +15,15 @@ class CreateCasasTable extends Migration
     {
         Schema::create('casas', function (Blueprint $table) {
             $table->bigIncrements('id');
+            // *** //
+            $table->string('nombre');
+            $table->text('descripcion');
+            $table->unsignedTinyInteger('nivel');
+            $table->text('imageURL');
+            $table->unsignedMediumInteger('poder');
+            $table->unsignedTinyInteger('reino_id');
+            $table->unsignedTinyInteger('estado_id');
+            // *** //
             $table->timestamps();
         });
     }

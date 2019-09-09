@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateArtefactosTable extends Migration
+class CreateHabilidadsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateArtefactosTable extends Migration
      */
     public function up()
     {
-        Schema::create('artefactos', function (Blueprint $table) {
+        Schema::create('habilidads', function (Blueprint $table) {
             $table->bigIncrements('id');
             // *** //
             $table->string('nombre');
@@ -26,7 +26,6 @@ class CreateArtefactosTable extends Migration
             $table->unsignedTinyInteger('wis');
             $table->unsignedTinyInteger('cha');
             $table->text('imageURL');
-            $table->unsignedMediumInteger('poder');
             $table->unsignedTinyInteger('aventura_id');
             $table->unsignedTinyInteger('estado_id');
             // *** //
@@ -41,6 +40,6 @@ class CreateArtefactosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('artefactos');
+        Schema::dropIfExists('habilidads');
     }
 }

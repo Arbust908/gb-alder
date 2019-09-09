@@ -15,6 +15,18 @@ class CreateRazasTable extends Migration
     {
         Schema::create('razas', function (Blueprint $table) {
             $table->bigIncrements('id');
+            /* *** */
+            $table->string('nombre');
+            $table->text('descripcion');
+            $table->unsignedTinyInteger('str');
+            $table->unsignedTinyInteger('dex');
+            $table->unsignedTinyInteger('con');
+            $table->unsignedTinyInteger('int');
+            $table->unsignedTinyInteger('wis');
+            $table->unsignedTinyInteger('cha');
+            $table->text('imageURL');
+            $table->unsignedTinyInteger('estado_id');
+            /* *** */
             $table->timestamps();
         });
     }

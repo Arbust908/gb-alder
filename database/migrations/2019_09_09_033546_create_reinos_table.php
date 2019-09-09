@@ -15,6 +15,12 @@ class CreateReinosTable extends Migration
     {
         Schema::create('reinos', function (Blueprint $table) {
             $table->bigIncrements('id');
+            /* *** */
+            $table->string('nombre');
+            $table->text('descripcion');
+            $table->text('imageURL');
+            $table->unsignedTinyInteger('estado_id');
+            /* *** */
             $table->timestamps();
         });
     }
